@@ -24,6 +24,7 @@
       <a href="#proceso">Proceso</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#cobertura">Cobertura</a>
+      <a href="#galeria">Galería</a>
       <a href="#contacto">Contacto</a>
     </div>
     <div class="nav-cta">
@@ -42,6 +43,7 @@
     <a href="#proceso" style="padding:12px 0;border-bottom:1px solid var(--line);">Proceso</a>
     <a href="#nosotros" style="padding:12px 0;border-bottom:1px solid var(--line);">Nosotros</a>
     <a href="#cobertura" style="padding:12px 0;border-bottom:1px solid var(--line);">Cobertura</a>
+    <a href="#galeria" style="padding:12px 0;border-bottom:1px solid var(--line);">Galería</a>
     <a href="#contacto" style="padding:12px 0;">Contacto</a>
   </div>
 </header>
@@ -77,12 +79,16 @@
     </div>
 
     <div>
-      <div class="compare">
-        <div class="compare-layer layer-clean" aria-hidden="true"></div>
+      <div class="compare" id="compareBox">
+        <video class="compare-layer layer-clean" id="videoAfter"
+               src="images/whatsapp-video-2026-07-02-946-34pm-1.mp4"
+               poster="images/poster-despues.jpg"
+               muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="compare-layer layer-dirty" id="dirtyLayer" aria-hidden="true">
-          <div class="stain s1"></div>
-          <div class="stain s2"></div>
-          <div class="stain s3"></div>
+          <video id="videoBefore"
+                 src="images/whatsapp-video-2026-07-02-946-34pm.mp4"
+                 poster="images/poster-antes.jpg"
+                 muted loop playsinline preload="none"></video>
         </div>
         <span class="compare-label label-left">Antes</span>
         <span class="compare-label label-right">Después</span>
@@ -324,6 +330,103 @@
     </div>
     <div class="map-box reveal">
       <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63622.39556717008!2d-74.18402465136712!3d4.700417399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b2d85e0a81f%3A0xbbda2326ba660178!2sBogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1761074646269!5m2!1ses-419!2sco" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Zona de cobertura Ronald's Clean en Bogotá"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="galeria">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Trabajos reales</p>
+      <h2>Así quedan los trabajos de Ronald's Clean</h2>
+      <p>Fotos y videos reales de servicios recientes. Toca un video para reproducirlo.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item span-2">
+        <picture>
+          <source srcset="images/whatsapp-image-2026-07-02-909-07pm-1.webp" type="image/webp">
+          <img src="images/whatsapp-image-2026-07-02-909-07pm-1.jpg" alt="Tenis Nike blancos recién lavados por Ronald's Clean" loading="lazy" decoding="async" width="800" height="600">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/whatsapp-image-2026-07-02-909-07pm.webp" type="image/webp">
+          <img src="images/whatsapp-image-2026-07-02-909-07pm.jpg" alt="Detalle de tenis después del lavado" loading="lazy" decoding="async" width="400" height="600">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/whatsapp-image-2026-07-02-909-08pm-1.webp" type="image/webp">
+          <img src="images/whatsapp-image-2026-07-02-909-08pm-1.jpg" alt="Zapatillas Jordan antes y después de la limpieza" loading="lazy" decoding="async" width="400" height="600">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/whatsapp-image-2026-07-02-909-08pm.webp" type="image/webp">
+          <img src="images/whatsapp-image-2026-07-02-909-08pm.jpg" alt="Tenis Under Armour limpios, antes y ahora" loading="lazy" decoding="async" width="400" height="600">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/whatsapp-image-2026-07-02-909-09pm.webp" type="image/webp">
+          <img src="images/whatsapp-image-2026-07-02-909-09pm.jpg" alt="Zapatillas New Balance antes y después del lavado" loading="lazy" decoding="async" width="400" height="600">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/whatsapp-image-2026-07-02-910-02pm.webp" type="image/webp">
+          <img src="images/whatsapp-image-2026-07-02-910-02pm.jpg" alt="Zapatillas listas después del lavado" loading="lazy" decoding="async" width="400" height="600">
+        </picture>
+      </div>
+      <div class="gallery-item video-item span-2">
+        <video class="gallery-video" preload="none" playsinline
+               poster="images/poster-galeria-1.jpg"
+               data-src="images/whatsapp-video-2026-07-02-910-02pm.mp4"></video>
+        <button class="play-badge" aria-label="Reproducir video">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="gallery-item video-item">
+        <video class="gallery-video" preload="none" playsinline
+               poster="images/poster-galeria-2.jpg"
+               data-src="images/whatsapp-video-2026-07-02-910-05pm.mp4"></video>
+        <button class="play-badge" aria-label="Reproducir video">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="gallery-item video-item">
+        <video class="gallery-video" preload="none" playsinline
+               poster="images/poster-galeria-3.jpg"
+               data-src="images/whatsapp-video-2026-07-02-910-07pm.mp4"></video>
+        <button class="play-badge" aria-label="Reproducir video">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="gallery-item video-item">
+        <video class="gallery-video" preload="none" playsinline
+               poster="images/poster-galeria-4.jpg"
+               data-src="images/whatsapp-video-2026-07-02-946-36pm.mp4"></video>
+        <button class="play-badge" aria-label="Reproducir video">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="gallery-item video-item">
+        <video class="gallery-video" preload="none" playsinline
+               poster="images/poster-galeria-5.jpg"
+               data-src="images/whatsapp-video-2026-07-07-1145-17am-1.mp4"></video>
+        <button class="play-badge" aria-label="Reproducir video">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="gallery-item video-item">
+        <video class="gallery-video" preload="none" playsinline
+               poster="images/poster-galeria-6.jpg"
+               data-src="images/whatsapp-video-2026-07-07-1145-17am.mp4"></video>
+        <button class="play-badge" aria-label="Reproducir video">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>

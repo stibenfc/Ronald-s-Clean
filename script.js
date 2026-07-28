@@ -12,6 +12,50 @@ if (range) {
   updateCompare();
 }
 
+// ===== Hero before/after videos: load + play only when visible =====
+const videoBefore = document.getElementById('videoBefore');
+const videoAfter = document.getElementById('videoAfter');
+const compareBox = document.getElementById('compareBox');
+if (videoBefore && videoAfter && compareBox) {
+  let heroVideosStarted = false;
+  const startHeroVideos = () => {
+    if (heroVideosStarted) return;
+    heroVideosStarted = true;
+    Promise.all([videoBefore.play(), videoAfter.play()]).catch(() => {});
+  };
+  const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { startHeroVideos(); heroObserver.disconnect(); }
+    });
+  }, { threshold: 0.25 });
+  heroObserver.observe(compareBox);
+
+  // Keep both clips roughly in sync (two independent decoders can drift)
+  videoBefore.addEventListener('timeupdate', () => {
+    if (Math.abs(videoBefore.currentTime - videoAfter.currentTime) > 0.3) {
+      videoAfter.currentTime = videoBefore.currentTime;
+    }
+  });
+}
+
+// ===== Gallery: tap-to-play videos, only fetched on demand =====
+document.querySelectorAll('.gallery-video').forEach(video => {
+  const item = video.closest('.video-item');
+  const btn = item.querySelector('.play-badge');
+  btn.addEventListener('click', () => {
+    if (!video.src) { video.src = video.getAttribute('data-src'); }
+    if (video.paused) {
+      video.play();
+      item.classList.add('is-playing');
+    } else {
+      video.pause();
+      item.classList.remove('is-playing');
+    }
+  });
+  video.addEventListener('click', () => btn.click());
+  video.addEventListener('ended', () => item.classList.remove('is-playing'));
+});
+
 // ===== Mobile menu =====
 const burger = document.querySelector('.burger');
 const mmenu = document.getElementById('mmenu');
